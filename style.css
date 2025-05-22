@@ -1,0 +1,522 @@
+/* Variables CSS pour des couleurs, tailles et effets uniformes */
+:root {
+    /* Couleurs principale dans un style apaisant et professionnel */
+    --color-primary: #4c6e58;
+    --color-secondary: #a7c4b5;
+    --color-text: #2d3b36;
+    --color-light: #f3f3f0;
+    --color-accent: #6b886b;
+    
+    /* Ombres pour effet néomorphisme */
+    --shadow-light: rgba(255, 255, 255, 0.7);
+    --shadow-dark: rgba(0, 0, 0, 0.1);
+    
+    /* Espacements */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 48px;
+    
+    /* Arrondis */
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    --border-radius-xl: 40px;
+}
+
+/* ====== RESET & STYLES DE BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Pour le défilement doux entre les sections */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ====== LAYOUT & SECTIONS ====== */
+section {
+    height: 100vh; /* Taille plein écran comme demandé dans l'examen */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: rgba(243, 243, 240, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    /* Effet néomorphisme subtil pour la navbar */
+    box-shadow: 0 4px 6px -1px var(--shadow-dark);
+}
+
+.logo h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xl);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-primary);
+}
+
+/* Animation sur hover pour les liens de navigation */
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ====== SECTION ACCUEIL ====== */
+.section-accueil {
+    background-image: url('fond_section1_profil.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Espace pour la navbar */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding: 0 var(--spacing-xl);
+    position: relative; /* Pour permettre le positionnement des CTA */
+}
+
+/* Carte de présentation avec effet néomorphisme */
+.presentation-card {
+    background: rgba(243, 243, 240, 0.45); /* Plus translucide */
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-xl);
+    max-width: 550px;
+    /* Effet néomorphisme plus subtil */
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1; /* Assure que la carte est en dessous du conteneur CTA */
+}
+
+.presentation-card h2 {
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.presentation-card h3 {
+    font-size: 22px;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500;
+}
+
+.intro-text {
+    font-size: 18px;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.approche {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xl);
+    font-style: italic;
+}
+
+/* Conteneur des boutons CTA avec effet néomorphisme */
+.cta-container {
+    background-color: rgba(243, 243, 240, 0.45);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-xl);
+    display: flex;
+    gap: var(--spacing-md);
+    position: absolute;
+    bottom: 120px;
+    right: 520px; /* Déplacé encore plus à gauche */
+    z-index: 10;
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    backdrop-filter: blur(5px);
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Bouton Services - Style néomorphisme */
+.btn-services {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    box-shadow: 
+        3px 3px 7px var(--shadow-dark),
+        -3px -3px 7px var(--shadow-light);
+}
+
+.btn-services:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        5px 5px 10px var(--shadow-dark),
+        -5px -5px 10px var(--shadow-light);
+}
+
+/* Bouton RDV - Style plus affirmé */
+.btn-rdv {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    box-shadow: 
+        3px 3px 7px rgba(0, 0, 0, 0.2),
+        -3px -3px 7px rgba(76, 110, 88, 0.1);
+}
+
+.btn-rdv:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-accent);
+}
+
+/* Animation au clic pour les boutons */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 
+        3px 3px 6px var(--shadow-dark),
+        -3px -3px 6px var(--shadow-light);
+}
+
+/* ====== SECTION SERVICES ====== */
+.section-services {
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+    min-height: 100vh;
+}
+
+.services-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    /* Important: Espacement très généreux en haut pour éloigner davantage le titre de la navbar */
+    padding-top: 180px; /* Augmentation significative de l'espace au-dessus du titre */
+    padding-bottom: 100px; /* Espace en bas de la section */
+}
+
+/* Titre de la section avec soulignement */
+.section-title {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: 0 auto var(--spacing-xl) auto;
+    border-radius: 2px;
+}
+
+/* Introduction aux services */
+.services-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl) auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* Conteneur des cartes de services */
+.services-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl); /* Ajout d'espace en bas */
+}
+
+/* Carte de service individuelle */
+.service-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-align: left;
+    /* Effet néomorphisme */
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        10px 10px 20px var(--shadow-dark),
+        -10px -10px 20px var(--shadow-light);
+}
+
+/* Icônes de services */
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.youth-icon, .family-icon, .person-icon {
+    fill: var(--color-secondary);
+}
+
+/* Titres des services */
+.service-card h3 {
+    font-size: 22px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+/* Textes des services */
+.service-card p {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+/* Bouton "En savoir plus" */
+.btn-more {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    box-shadow: 3px 3px 6px var(--shadow-dark);
+}
+/* ====== SECTION CONTACT ====== */
+.section-contact {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Conteneur principal avec espacement considérablement réduit */
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 70px; /* Considérablement réduit pour coller à la navbar */
+    padding-bottom: 20px; /* Réduit pour plus d'espace en bas */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace réduit entre les éléments */
+}
+
+/* Titre et soulignement */
+.section-contact .section-title {
+    color: var(--color-light);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 5px; /* Réduit */
+}
+
+.section-contact .title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 0 auto 25px auto; /* Réduit */
+    border-radius: 2px;
+}
+
+/* Texte d'introduction centré */
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto 30px; /* Réduit */
+    text-align: center;
+}
+
+.contact-text p {
+    font-size: 16px; /* Légèrement plus petit */
+    line-height: 1.5;
+    margin-bottom: 15px; /* Réduit */
+}
+
+.contact-text .italics {
+    font-style: italic;
+}
+
+/* Disposition en deux colonnes */
+.contact-columns {
+    display: flex;
+    gap: 40px; /* Réduit */
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.contact-column-left,
+.contact-column-right {
+    flex: 1;
+    max-width: 400px; /* Réduit */
+}
+
+/* Styles pour la photo - considérablement réduite */
+.contact-image {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px; /* Réduit */
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour la carte d'informations - taille réduite */
+.contact-info-box {
+    background: rgba(243, 243, 240, 0.35);
+    padding: 25px; /* Réduit */
+    border-radius: var(--border-radius-xl);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    backdrop-filter: blur(5px);
+}
+
+.contact-info-item {
+    margin-bottom: 15px; /* Réduit */
+    font-size: 15px; /* Plus petit */
+}
+
+.contact-info-item p {
+    padding: 3px 0; /* Réduit */
+}
+
+/* Style pour le lien email */
+.email-link {
+    color: var(--color-light);
+    background-color: var(--color-secondary);
+    padding: 2px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    background-color: var(--color-accent);
+}
+
+/* Bouton d'envoi de mail */
+.contact-mail-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 10px 20px; /* Réduit */
+    border-radius: 8px;
+    margin-top: 15px; /* Réduit */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-mail-btn:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    padding: 10px 0; /* Réduit */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+.site-footer p {
+    font-size: 12px; /* Plus petit */
+}
+
+.site-footer a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
