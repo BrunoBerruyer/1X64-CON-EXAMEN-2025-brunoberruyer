@@ -24,40 +24,22 @@
     --border-radius-xl: 40px;
 }
 
-/* Performance: Optimisation du rendu */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 /* ====== RESET & STYLES DE BASE ====== */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth; /* Pour le défilement doux entre les sections */
-    /* Optimisation de performance */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Optimisation de performance */
-    will-change: scroll-position;
-}
-
-/* Optimisation des images pour de meilleures performances */
-img {
-    max-width: 100%;
-    height: auto;
-    /* Optimisation du décodage */
-    image-rendering: -webkit-optimize-contrast;
 }
 
 /* ====== LAYOUT & SECTIONS ====== */
