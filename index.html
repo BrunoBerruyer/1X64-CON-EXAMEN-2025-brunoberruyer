@@ -124,9 +124,9 @@
                 <h2 class="section-title">Contactez-moi</h2>
                 <div class="title-underline"></div>
                 
-                <!-- Texte centré avec style italique pour la deuxième ligne -->
+                <!-- Texte d'introduction -->
                 <div class="contact-introduction">
-                    <p class="contact-main-text">Vous êtes adulte, adolescent ou parent et vous souhaitez entamer une démarche thérapeutique ? Pour toute demande de rendez-vous ou de renseignement, je vous invite à me contacter.</p>
+                    <p class="contact-main-text">Vous êtes adulte, adolescent ou parent et vous souhaitez entamer une démarche thérapeutique ? Pour toute demande de rendez-vous ou de renseignement, utilisez le formulaire ci-dessous.</p>
                     <p class="contact-philosophy">Je suis à votre écoute, en toute bienveillance et confidentialité.</p>
                 </div>
                 
@@ -140,28 +140,68 @@
                                  width="280" 
                                  height="277">
                         </div>
+                        
+                        <!-- Informations de contact sécurisées -->
+                        <div class="contact-info-secure">
+                            <p class="contact-location">📍 1170 Watermael-Boitsfort</p>
+                            <p class="contact-hours">🕒 Lundi - Vendredi: 9h - 19h<br>Samedi: 9h - 12h</p>
+                        </div>
                     </div>
                     
-                    <!-- Colonne droite avec les informations de contact -->
+                    <!-- Colonne droite avec le formulaire -->
                     <div class="contact-column-right">
-                        <div class="contact-info-box">
-                            <div class="contact-info-item">
-                                <p class="contact-address">1170 Watermael-Boitsfort</p>
-                            </div>
-                            <div class="contact-info-item">
-                                <p class="contact-phone">0486 47 24 03</p>
-                            </div>
-                            <div class="contact-info-item">
-                                <p class="contact-email"><a href="mailto:ojacmain@gmail.com" class="email-link">ojacmain@gmail.com</a></p>
-                            </div>
-                            <div class="contact-info-item">
-                                <p class="contact-schedule">Lundi - Vendredi: 9h - 19h<br>Samedi: 9h - 12h</p>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                            <!-- Access Key Web3Forms -->
+                            <input type="hidden" name="access_key" value="b98e78f7-8577-4c49-b7f3-2bf4454cadd1">
+                            
+                            <!-- Configuration du formulaire -->
+                            <input type="hidden" name="subject" value="Nouvelle demande de consultation - Site Web Odile Jacmain">
+                            <input type="hidden" name="from_name" value="Site Web Odile Jacmain">
+                            <input type="hidden" name="replyto" value="ojacmain@gmail.com">
+                            
+                            <!-- Champs du formulaire -->
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nom et prénom *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
                             </div>
                             
-                            <a href="mailto:jacmain.odile@live.be" class="contact-mail-btn">
-                                envoyez un mail
-                            </a>
-                        </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="consultation_type" class="form-label">Type de consultation</label>
+                                <select id="consultation_type" name="consultation_type" class="form-select">
+                                    <option value="">-- Sélectionnez --</option>
+                                    <option value="Suivi individuel adulte">Suivi individuel adulte</option>
+                                    <option value="Accompagnement adolescent">Accompagnement adolescent</option>
+                                    <option value="Thérapie de famille">Thérapie de famille</option>
+                                    <option value="Renseignement général">Renseignement général</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="4" required placeholder="Décrivez brièvement votre demande ou vos questions..."></textarea>
+                            </div>
+                            
+                            <!-- Protection anti-spam -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                            <!-- Bouton d'envoi -->
+                            <button type="submit" class="form-submit-btn">
+                                Envoyer ma demande
+                            </button>
+                            
+                            <!-- Message informatif -->
+                            <p class="form-info">Votre message sera transmis rapidement et en toute confidentialité.</p>
+                        </form>
                     </div>
                 </div>
             </div>
