@@ -383,38 +383,38 @@ main {
     justify-content: flex-start;
 }
 
-/* Conteneur principal avec espacement réduit */
+/* Conteneur principal avec espacement équilibré */
 .contact-container {
     width: 90%;
     max-width: 1200px;
-    padding-top: 50px; /* Encore plus réduit */
-    padding-bottom: 15px; /* Encore plus réduit */
+    padding-top: 80px; /* Remis à un niveau équilibré comme les autres sections */
+    padding-bottom: 15px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Réduit encore */
+    gap: 18px; /* Légèrement augmenté pour plus d'harmonie */
 }
 
 /* Titre et soulignement */
 .section-contact .section-title {
     color: var(--color-light);
-    font-size: 32px; /* Légèrement plus petit */
+    font-size: 34px; /* Légèrement augmenté pour plus d'équilibre */
     text-align: center;
-    margin-bottom: 3px; /* Encore plus réduit */
+    margin-bottom: 5px; /* Légèrement augmenté */
 }
 
 .section-contact .title-underline {
     width: 80px;
     height: 3px;
     background-color: var(--color-light);
-    margin: 0 auto 15px auto; /* Encore plus réduit */
+    margin: 0 auto 20px auto; /* Légèrement augmenté pour plus d'harmonie */
     border-radius: 2px;
 }
 
-/* Introduction de contact - nouveau nom de classe plus descriptif */
+/* Introduction de contact - espacement harmonisé */
 .contact-introduction {
     max-width: 800px;
-    margin: 0 auto 20px; /* Encore plus réduit */
+    margin: 0 auto 25px; /* Légèrement augmenté pour plus d'harmonie */
     text-align: center;
 }
 
