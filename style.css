@@ -446,35 +446,17 @@ main {
     max-width: 400px; /* Réduit */
 }
 
-/* Styles pour la photo - considérablement réduite */
+/* Styles pour la photo - optimisée */
 .contact-image {
-    margin: 0 auto 15px; /* Encore plus réduit */
+    margin: 0 auto;
     width: 100%;
-    max-width: 260px; /* Encore plus petit */
+    max-width: 260px;
 }
 
 .contact-image img {
     width: 100%;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Informations de contact sécurisées */
-.contact-info-secure {
-    background: rgba(243, 243, 240, 0.35);
-    padding: 15px; /* Plus compact */
-    border-radius: var(--border-radius-lg);
-    box-shadow: 
-        8px 8px 16px var(--shadow-dark),
-        -8px -8px 16px var(--shadow-light);
-    backdrop-filter: blur(5px);
-}
-
-.contact-location,
-.contact-hours {
-    color: var(--color-light);
-    font-size: 13px; /* Plus petit */
-    margin-bottom: 8px; /* Plus compact */
 }
 
 /* ====== FORMULAIRE DE CONTACT ====== */
