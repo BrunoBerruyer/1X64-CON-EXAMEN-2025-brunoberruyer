@@ -137,14 +137,8 @@
                         <div class="contact-image">
                             <img src="profil.png" 
                                  alt="Portrait professionnel d'Odile Jacmain, psychologue clinicienne dans son cabinet à Watermael-Boitsfort" 
-                                 width="280" 
-                                 height="277">
-                        </div>
-                        
-                        <!-- Informations de contact sécurisées -->
-                        <div class="contact-info-secure">
-                            <p class="contact-location">📍 1170 Watermael-Boitsfort</p>
-                            <p class="contact-hours">🕒 Lundi - Vendredi: 9h - 19h<br>Samedi: 9h - 12h</p>
+                                 width="260" 
+                                 height="259">
                         </div>
                     </div>
                     
@@ -159,36 +153,40 @@
                             <input type="hidden" name="from_name" value="Site Web Odile Jacmain">
                             <input type="hidden" name="replyto" value="ojacmain@gmail.com">
                             
-                            <!-- Champs du formulaire -->
-                            <div class="form-group">
-                                <label for="name" class="form-label">Nom et prénom *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
+                            <!-- Champs du formulaire avec layout optimisé -->
+                            <div class="form-row">
+                                <div class="form-group form-half">
+                                    <label for="name" class="form-label">Nom et prénom *</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group form-half">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Téléphone</label>
-                                <input type="tel" id="phone" name="phone" class="form-input">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="consultation_type" class="form-label">Type de consultation</label>
-                                <select id="consultation_type" name="consultation_type" class="form-select">
-                                    <option value="">-- Sélectionnez --</option>
-                                    <option value="Suivi individuel adulte">Suivi individuel adulte</option>
-                                    <option value="Accompagnement adolescent">Accompagnement adolescent</option>
-                                    <option value="Thérapie de famille">Thérapie de famille</option>
-                                    <option value="Renseignement général">Renseignement général</option>
-                                </select>
+                            <div class="form-row">
+                                <div class="form-group form-half">
+                                    <label for="phone" class="form-label">Téléphone</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input">
+                                </div>
+                                
+                                <div class="form-group form-half">
+                                    <label for="consultation_type" class="form-label">Type de consultation</label>
+                                    <select id="consultation_type" name="consultation_type" class="form-select">
+                                        <option value="">-- Sélectionnez --</option>
+                                        <option value="Suivi individuel adulte">Suivi individuel adulte</option>
+                                        <option value="Accompagnement adolescent">Accompagnement adolescent</option>
+                                        <option value="Thérapie de famille">Thérapie de famille</option>
+                                        <option value="Renseignement général">Renseignement général</option>
+                                    </select>
+                                </div>
                             </div>
                             
                             <div class="form-group">
                                 <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="4" required placeholder="Décrivez brièvement votre demande ou vos questions..."></textarea>
+                                <textarea id="message" name="message" class="form-textarea" rows="3" required placeholder="Décrivez brièvement votre demande ou vos questions..."></textarea>
                             </div>
                             
                             <!-- Protection anti-spam -->
@@ -198,9 +196,6 @@
                             <button type="submit" class="form-submit-btn">
                                 Envoyer ma demande
                             </button>
-                            
-                            <!-- Message informatif -->
-                            <p class="form-info">Votre message sera transmis rapidement et en toute confidentialité.</p>
                         </form>
                     </div>
                 </div>
