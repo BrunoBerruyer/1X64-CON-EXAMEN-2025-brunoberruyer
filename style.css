@@ -11,17 +11,22 @@
     --shadow-light: rgba(255, 255, 255, 0.7);
     --shadow-dark: rgba(0, 0, 0, 0.1);
     
-    /* Espacements */
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 48px;
+    /* BONUS HYBRIDE : Espacements avec calc() */
+    --spacing-base: 1rem;
+    --spacing-sm: calc(var(--spacing-base) * 0.5);    /* 8px */
+    --spacing-md: calc(var(--spacing-base) * 1);      /* 16px */
+    --spacing-lg: calc(var(--spacing-base) * 1.5);    /* 24px */
+    --spacing-xl: calc(var(--spacing-base) * 3);      /* 48px */
     
-    /* Arrondis */
-    --border-radius-sm: 8px;
-    --border-radius-md: 16px;
-    --border-radius-lg: 24px;
-    --border-radius-xl: 40px;
+    /* BONUS HYBRIDE : Espacements adaptatifs avec clamp() */
+    --spacing-section: clamp(2rem, 5vw, 4rem);
+    --spacing-container: clamp(1rem, 3vw, 2rem);
+    
+    /* BONUS HYBRIDE : Arrondis avec clamp() */
+    --border-radius-sm: clamp(6px, 1vw, 10px);
+    --border-radius-md: clamp(12px, 2vw, 20px);
+    --border-radius-lg: clamp(18px, 3vw, 28px);
+    --border-radius-xl: clamp(30px, 4vw, 50px);
 }
 
 /* ====== RESET & STYLES DE BASE ====== */
@@ -123,9 +128,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px; /* Espace pour la navbar */
+    /* BONUS HYBRIDE : Padding adaptatif avec clamp() */
+    padding: clamp(60px, 8vh, 100px) clamp(24px, 4vw, 48px);
 }
 
+/* BONUS HYBRIDE : Hero content avec max() et clamp() */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -133,8 +140,8 @@ main {
     align-items: flex-start;
     height: 100%;
     width: 100%;
-    padding: 0 var(--spacing-xl);
-    position: relative; /* Pour permettre le positionnement des CTA */
+    max-width: min(1200px, 95vw);
+    gap: clamp(24px, 4vw, 48px);
 }
 
 /* Carte de présentation avec effet néomorphisme */
@@ -148,18 +155,17 @@ main {
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
     backdrop-filter: blur(5px);
-    position: relative;
-    z-index: 1; /* Assure que la carte est en dessous du conteneur CTA */
 }
 
+/* BONUS HYBRIDE : Titres avec clamp() */
 .presentation-card h2 {
-    font-size: 32px;
+    font-size: clamp(28px, 4vw, 38px);
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
 }
 
 .presentation-card h3 {
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 26px);
     color: var(--color-accent);
     margin-bottom: var(--spacing-lg);
     font-weight: 500;
@@ -180,22 +186,21 @@ main {
     font-style: italic;
 }
 
-/* Conteneur des boutons CTA avec effet néomorphisme */
-/* Conteneur des boutons CTA - CORRECTION Desktop-First */
+/* BONUS HYBRIDE : Conteneur CTA avec clamp() */
 .cta-container {
     background-color: rgba(243, 243, 240, 0.45);
-    padding: var(--spacing-lg);
+    padding: clamp(16px, 3vw, 24px);
     border-radius: var(--border-radius-xl);
     display: flex;
-    gap: var(--spacing-md);
+    gap: clamp(12px, 2vw, 20px);
     
-    /* Positionnement à droite mais avec espaces confortables */
-    align-self: flex-end; /* Garde l'alignement à droite */
-    margin-top: var(--spacing-xl); /* Espace au-dessus (24px) */
-    margin-bottom: var(--spacing-xl); /* Espace en dessous (24px) */
-    margin-right: var(--spacing-xl); /* Espace depuis le bord droit (24px) */
+    align-self: flex-end;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    margin-right: clamp(24px, 4vw, 48px);
     
-    box-shadow:        8px 8px 16px var(--shadow-dark),
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
     backdrop-filter: blur(5px);
 }
@@ -258,18 +263,17 @@ main {
     min-height: 100vh;
 }
 
+/* BONUS HYBRIDE : Services container avec min() et max() */
 .services-container {
-    width: 90%;
-    max-width: 1200px;
+    width: min(90%, 1200px);
     text-align: center;
-    /* Important: Espacement très généreux en haut pour éloigner davantage le titre de la navbar */
-    padding-top: 180px; /* Augmentation significative de l'espace au-dessus du titre */
-    padding-bottom: 100px; /* Espace en bas de la section */
+    padding-top: max(120px, 15vh);
+    padding-bottom: min(100px, 12vh);
 }
 
-/* Titre de la section avec soulignement */
+/* BONUS HYBRIDE : Titre de section avec clamp() */
 .section-title {
-    font-size: 36px;
+    font-size: clamp(30px, 5vw, 42px);
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
     font-weight: 500;
@@ -292,13 +296,13 @@ main {
     color: var(--color-text);
 }
 
-/* Conteneur des cartes de services */
+/* BONUS HYBRIDE : Conteneur des cartes avec clamp() */
 .services-cards {
     display: flex;
     justify-content: space-between;
-    gap: var(--spacing-xl);
+    gap: clamp(24px, 4vw, 48px);
     margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl); /* Ajout d'espace en bas */
+    margin-bottom: var(--spacing-xl);
 }
 
 /* Carte de service individuelle */
@@ -386,58 +390,57 @@ main {
     justify-content: flex-start;
 }
 
-/* Conteneur principal avec espacement équilibré */
+/* BONUS HYBRIDE : Contact container avec clamp() */
 .contact-container {
-    width: 90%;
-    max-width: 1200px;
-    padding-top: 80px; /* Remis à un niveau équilibré comme les autres sections */
-    padding-bottom: 15px;
+    width: min(90%, 1200px);
+    padding-top: clamp(60px, 10vh, 100px);
+    padding-bottom: var(--spacing-md);
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 18px; /* Légèrement augmenté pour plus d'harmonie */
+    gap: clamp(15px, 2vh, 25px);
 }
 
 /* Titre et soulignement */
 .section-contact .section-title {
     color: var(--color-light);
-    font-size: 34px; /* Légèrement augmenté pour plus d'équilibre */
+    font-size: clamp(30px, 5vw, 42px);
     text-align: center;
-    margin-bottom: 5px; /* Légèrement augmenté */
+    margin-bottom: 5px;
 }
 
 .section-contact .title-underline {
     width: 80px;
     height: 3px;
     background-color: var(--color-light);
-    margin: 0 auto 20px auto; /* Légèrement augmenté pour plus d'harmonie */
+    margin: 0 auto 20px auto;
     border-radius: 2px;
 }
 
 /* Introduction de contact - espacement harmonisé */
 .contact-introduction {
     max-width: 800px;
-    margin: 0 auto 25px; /* Légèrement augmenté pour plus d'harmonie */
+    margin: 0 auto 25px;
     text-align: center;
 }
 
 .contact-main-text {
-    font-size: 15px; /* Plus petit */
+    font-size: 15px;
     line-height: 1.4;
-    margin-bottom: 10px; /* Encore plus réduit */
+    margin-bottom: 10px;
 }
 
 .contact-philosophy {
     font-style: italic;
-    font-size: 15px; /* Plus petit */
+    font-size: 15px;
     line-height: 1.4;
-    margin-bottom: 10px; /* Encore plus réduit */
+    margin-bottom: 10px;
 }
 
 /* Disposition en deux colonnes */
 .contact-columns {
     display: flex;
-    gap: 30px; /* Encore plus réduit */
+    gap: 30px;
     align-items: center;
     justify-content: center;
     margin-top: 0;
@@ -446,7 +449,7 @@ main {
 .contact-column-left,
 .contact-column-right {
     flex: 1;
-    max-width: 400px; /* Réduit */
+    max-width: 400px;
 }
 
 /* Styles pour la photo - optimisée */
@@ -463,28 +466,29 @@ main {
 }
 
 /* ====== FORMULAIRE DE CONTACT ====== */
+/* BONUS HYBRIDE : Formulaire avec clamp() et min() */
 .contact-form {
     background: rgba(243, 243, 240, 0.35);
-    padding: 20px; /* Encore plus compact */
+    padding: clamp(16px, 3vw, 24px);
     border-radius: var(--border-radius-xl);
     box-shadow: 
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
     backdrop-filter: blur(5px);
     width: 100%;
-    max-width: 450px;
+    max-width: min(450px, 90vw);
 }
 
 /* Layout horizontal pour les champs */
 .form-row {
     display: flex;
-    gap: 12px; /* Plus compact */
-    margin-bottom: 12px; /* Plus compact */
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 /* Groupes de champs */
 .form-group {
-    margin-bottom: 12px; /* Plus compact */
+    margin-bottom: 12px;
 }
 
 .form-group.form-half {
@@ -590,9 +594,9 @@ main {
     background-color: var(--color-primary);
     color: var(--color-light);
     text-decoration: none;
-    padding: 10px 20px; /* Réduit */
+    padding: 10px 20px;
     border-radius: 8px;
-    margin-top: 15px; /* Réduit */
+    margin-top: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -605,7 +609,7 @@ main {
 /* ====== FOOTER ====== */
 .site-footer {
     width: 100%;
-    padding: 10px 0; /* Réduit */
+    padding: 10px 0;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.1);
     margin-top: auto;
@@ -613,7 +617,7 @@ main {
 
 /* Nouveau nom de classe plus descriptif pour les crédits du footer */
 .footer-credits {
-    font-size: 12px; /* Plus petit */
+    font-size: 12px;
 }
 
 .footer-credits a {
