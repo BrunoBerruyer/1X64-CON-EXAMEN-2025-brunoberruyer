@@ -128,20 +128,22 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* BONUS HYBRIDE : Padding adaptatif avec clamp() */
-    padding: clamp(60px, 8vh, 100px) clamp(24px, 4vw, 48px);
+    /* AJUSTEMENT : Plus d'espace en haut pour pousser le contenu vers le bas */
+    padding: clamp(120px, 15vh, 160px) clamp(24px, 4vw, 48px) clamp(60px, 8vh, 100px);
 }
 
 /* BONUS HYBRIDE : Hero content avec max() et clamp() */
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Changé de 'center' à 'flex-start' */
     align-items: flex-start;
     height: 100%;
     width: 100%;
     max-width: min(1200px, 95vw);
-    gap: clamp(24px, 4vw, 48px);
+    gap: clamp(32px, 5vw, 56px); /* Gap légèrement augmenté */
+    /* AJUSTEMENT : Padding top pour descendre le contenu */
+    padding-top: clamp(40px, 8vh, 80px);
 }
 
 /* Carte de présentation avec effet néomorphisme */
