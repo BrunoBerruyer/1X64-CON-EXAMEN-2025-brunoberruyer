@@ -269,7 +269,7 @@ main {
 .services-container {
     width: min(90%, 1200px);
     text-align: center;
-    padding-top: max(120px, 15vh);
+    padding-top: max(180px, 20vh);
     padding-bottom: min(100px, 12vh);
 }
 
