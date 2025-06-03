@@ -136,14 +136,12 @@ main {
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Changé de 'center' à 'flex-start' */
+    justify-content: center; /* Retour à center pour garder les boutons bien placés */
     align-items: flex-start;
     height: 100%;
     width: 100%;
     max-width: min(1200px, 95vw);
     gap: clamp(32px, 5vw, 56px); /* Gap légèrement augmenté */
-    /* AJUSTEMENT : Padding top pour descendre le contenu */
-    padding-top: clamp(40px, 8vh, 80px);
 }
 
 /* Carte de présentation avec effet néomorphisme */
@@ -157,6 +155,8 @@ main {
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
     backdrop-filter: blur(5px);
+    /* AJUSTEMENT : Marge top pour descendre la carte sans casser les boutons */
+    margin-top: clamp(40px, 8vh, 80px);
 }
 
 /* BONUS HYBRIDE : Titres avec clamp() */
