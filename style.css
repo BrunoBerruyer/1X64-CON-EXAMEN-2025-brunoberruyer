@@ -181,16 +181,22 @@ main {
 }
 
 /* Conteneur des boutons CTA avec effet néomorphisme */
+/* Conteneur des boutons CTA - CORRECTION Desktop-First */
 .cta-container {
     background-color: rgba(243, 243, 240, 0.45);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius-xl);
     display: flex;
     gap: var(--spacing-md);
-    position: absolute;
-    bottom: 120px;
-    right: 520px; /* Déplacé encore plus à gauche */
-    z-index: 10;
+    /* SUPPRESSION du positionnement absolu problématique */
+    /* position: absolute; */
+    /* bottom: 120px; */
+    /* right: 520px; */
+    /* z-index: 10; */
+    
+    /* NOUVEAU : Positionnement flexible Desktop-First */
+    align-self: flex-end; /* Alignement à droite dans le conteneur */
+    margin-top: auto; /* Pousse vers le bas */
     box-shadow: 
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
