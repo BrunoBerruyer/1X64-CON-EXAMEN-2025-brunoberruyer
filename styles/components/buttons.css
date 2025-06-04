@@ -1,0 +1,96 @@
+/* Boutons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Bouton Services - Style néomorphisme */
+.btn-services {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    box-shadow: 
+        3px 3px 7px var(--shadow-dark),
+        -3px -3px 7px var(--shadow-light);
+}
+
+.btn-services:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        5px 5px 10px var(--shadow-dark),
+        -5px -5px 10px var(--shadow-light);
+}
+
+/* Bouton RDV - Style plus affirmé */
+.btn-rdv {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    box-shadow: 
+        3px 3px 7px rgba(0, 0, 0, 0.2),
+        -3px -3px 7px rgba(76, 110, 88, 0.1);
+}
+
+.btn-rdv:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-accent);
+}
+/* Animation au clic pour les boutons */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 
+        3px 3px 6px var(--shadow-dark),
+        -3px -3px 6px var(--shadow-light);
+}
+/* Bouton "En savoir plus" */
+.btn-more {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    box-shadow: 3px 3px 6px var(--shadow-dark);
+}
+/* Bouton d'envoi */
+.form-submit-btn {
+    width: 100%;
+    padding: 12px 25px;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Effet néomorphisme pour le bouton */
+    box-shadow: 
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
+.form-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+}

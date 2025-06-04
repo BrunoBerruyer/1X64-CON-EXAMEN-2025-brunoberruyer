@@ -1,0 +1,25 @@
+/* ===================================
+   FICHIER PRINCIPAL - IMPORT DE TOUS LES STYLES
+   =================================== */
+
+/* 1. Base - Variables et reset */
+@import 'base/variables.css';
+@import 'base/reset.css';
+
+/* 2. Layout - Structure générale */
+@import 'layout/sections.css';
+@import 'layout/header.css';
+@import 'layout/footer.css';
+
+/* 3. Components - Éléments réutilisables */
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/forms.css';
+@import 'components/hero.css';
+@import 'components/services.css';
+@import 'components/contact.css';
+
+/* 4. Utilities - Helpers et animations */
+@import 'utilities/helpers.css';
+@import 'utilities/animations.css';
+@import 'utilities/responsive.css';

@@ -1,0 +1,42 @@
+/* ====== HEADER & NAVBAR ====== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Z-index élevé pour être au-dessus de tout le contenu */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: rgba(243, 243, 240, 0.95);
+    /* Effet néomorphisme subtil pour la navbar */
+    box-shadow: 0 4px 6px -1px var(--shadow-dark);
+}
+
+.logo h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xl);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-primary);
+}

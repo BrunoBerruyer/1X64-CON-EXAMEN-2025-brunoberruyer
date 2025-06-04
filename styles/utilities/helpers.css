@@ -1,0 +1,20 @@
+/* Classes réutilisables */
+/* Protection anti-spam cachée */
+.hidden {
+    display: none !important;
+}
+/* Titres de sections partagés */
+.section-title {
+    font-size: clamp(30px, 5vw, 42px);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: 0 auto var(--spacing-xl) auto;
+    border-radius: 2px;
+}

@@ -1,0 +1,86 @@
+/* ====== SECTION CONTACT ====== */
+.section-contact {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* BONUS HYBRIDE : Contact container avec clamp() */
+.contact-container {
+    width: min(90%, 1200px);
+    padding-top: clamp(60px, 10vh, 100px);
+    padding-bottom: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2vh, 25px);
+}
+
+/* Titre et soulignement */
+.section-contact .section-title {
+    color: var(--color-light);
+    font-size: clamp(30px, 5vw, 42px);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section-contact .title-underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 0 auto 20px auto;
+    border-radius: 2px;
+}
+
+/* Introduction de contact - espacement harmonisé */
+.contact-introduction {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.contact-main-text {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.contact-philosophy {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Disposition en deux colonnes */
+.contact-columns {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.contact-column-left,
+.contact-column-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Styles pour la photo - optimisée */
+.contact-image {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 260px;
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

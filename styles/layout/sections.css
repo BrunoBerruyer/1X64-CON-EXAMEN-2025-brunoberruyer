@@ -1,0 +1,11 @@
+/* ====== LAYOUT & SECTIONS ====== */
+section {
+    height: 100vh; /* Taille plein écran comme demandé dans l'examen */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+/* ====== MAIN CONTENT ====== */
+main {
+    padding-top: 0; /* Le padding est géré individuellement par chaque section */
+}

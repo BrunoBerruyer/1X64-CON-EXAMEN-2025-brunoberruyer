@@ -1,0 +1,17 @@
+/* ====== RESET & STYLES DE BASE ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Pour le défilement doux entre les sections */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}

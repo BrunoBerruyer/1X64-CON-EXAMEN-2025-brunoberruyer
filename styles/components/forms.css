@@ -1,0 +1,79 @@
+/* ====== FORMULAIRE DE CONTACT ====== */
+/* BONUS HYBRIDE : Formulaire avec clamp() et min() */
+.contact-form {
+    background: rgba(243, 243, 240, 0.35);
+    padding: clamp(16px, 3vw, 24px);
+    border-radius: var(--border-radius-xl);
+    box-shadow: 
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    max-width: min(450px, 90vw);
+}
+
+/* Layout horizontal pour les champs */
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* Groupes de champs */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group.form-half {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Labels des champs */
+.form-label {
+    display: block;
+    color: var(--color-light);
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+/* Champs de saisie */
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: var(--border-radius-md);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    /* Effet néomorphisme inversé */
+    box-shadow: 
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 
+        inset 2px 2px 4px var(--shadow-dark),
+        inset -2px -2px 4px var(--shadow-light);
+}
+
+/* Style spécifique pour le textarea */
+.form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Style pour le select */
+.form-select {
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+/* ====== SECTION SERVICES ====== */
+.section-services {
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+    min-height: 100vh;
+}
+
+/* BONUS HYBRIDE : Services container avec min() et max() */
+.services-container {
+    width: min(90%, 1200px);
+    text-align: center;
+    padding-top: max(180px, 20vh);
+    padding-bottom: min(100px, 12vh);
+}
+/* Introduction aux services - nouveau nom de classe plus descriptif */
+.services-introduction {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl) auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+/* Icônes de services */
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.youth-icon, .family-icon, .person-icon {
+    fill: var(--color-secondary);
+}
+/* Descriptions des services - nouveau nom de classe plus descriptif */
+.service-description {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}

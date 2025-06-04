@@ -1,0 +1,24 @@
+/* ====== FOOTER ====== */
+.site-footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+/* Nouveau nom de classe plus descriptif pour les crédits du footer */
+.footer-credits {
+    font-size: 12px;
+}
+
+.footer-credits a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-credits a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+/* Variables CSS pour des couleurs, tailles et effets uniformes */
+:root {
+    /* Couleurs principale dans un style apaisant et professionnel */
+    --color-primary: #4c6e58;
+    --color-secondary: #a7c4b5;
+    --color-text: #2d3b36;
+    --color-light: #f3f3f0;
+    --color-accent: #6b886b;
+    
+    /* Ombres pour effet néomorphisme */
+    --shadow-light: rgba(255, 255, 255, 0.7);
+    --shadow-dark: rgba(0, 0, 0, 0.1);
+    
+    /* BONUS HYBRIDE : Espacements avec calc() */
+    --spacing-base: 1rem;
+    --spacing-sm: calc(var(--spacing-base) * 0.5);    /* 8px */
+    --spacing-md: calc(var(--spacing-base) * 1);      /* 16px */
+    --spacing-lg: calc(var(--spacing-base) * 1.5);    /* 24px */
+    --spacing-xl: calc(var(--spacing-base) * 3);      /* 48px */
+    
+    /* BONUS HYBRIDE : Espacements adaptatifs avec clamp() */
+    --spacing-section: clamp(2rem, 5vw, 4rem);
+    --spacing-container: clamp(1rem, 3vw, 2rem);
+    
+    /* BONUS HYBRIDE : Arrondis avec clamp() */
+    --border-radius-sm: clamp(6px, 1vw, 10px);
+    --border-radius-md: clamp(12px, 2vw, 20px);
+    --border-radius-lg: clamp(18px, 3vw, 28px);
+    --border-radius-xl: clamp(30px, 4vw, 50px);
+}
