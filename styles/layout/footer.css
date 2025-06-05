@@ -1,24 +1,45 @@
 /* ====== FOOTER ====== */
-.site-footer {
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    margin-top: auto;
+.section-contact {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    height: calc(100vh - 60px); /* ← Footer plus fin (60px au lieu de 80px) */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Nouveau nom de classe plus descriptif pour les crédits du footer */
 .footer-credits {
     font-size: 12px;
+    color: var(--color-text-secondary);
+}
+.site-footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: var(--color-secondary);
+    box-shadow: 
+        0 -4px 8px rgba(0, 0, 0, 0.1),
+        0 -2px 4px rgba(255, 255, 255, 0.7);
+    display: flex; /* ← AJOUTE */
+    align-items: center; /* ← AJOUTE */
+    justify-content: center; /* ← AJOUTE */
 }
 
-.footer-credits a {
+
+.footer-credits {
+    font-size: 12px;
     color: var(--color-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    text-align: center; /* ← ASSURE-TOI que c'est bien là */
+    width: 100%; /* ← AJOUTE pour être sûr */
 }
+
+
 
 .footer-credits a:hover {
     color: var(--color-secondary);
     text-decoration: underline;
+    transform: translateY(-1px);
 }

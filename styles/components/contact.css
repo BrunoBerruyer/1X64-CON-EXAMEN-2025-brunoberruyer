@@ -2,7 +2,7 @@
 .section-contact {
     background-color: var(--color-primary);
     color: var(--color-light);
-    min-height: 100vh;
+    height: calc(100vh - 60px); /* ← Footer plus fin (60px au lieu de 80px) */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     justify-content: flex-start;
 }
 
-/* BONUS HYBRIDE : Contact container avec clamp() */
+/* Le reste de ton CSS reste identique - pas de changement */
 .contact-container {
     width: min(90%, 1200px);
     padding-top: clamp(60px, 10vh, 100px);
